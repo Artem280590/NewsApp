@@ -10,4 +10,5 @@
 
     <color name="teal">#0DCDAA</color>
     <color name="lightGrey">#F2F2F2</color>
+    <color name="gray_black">#262627</color>
 </resources>
