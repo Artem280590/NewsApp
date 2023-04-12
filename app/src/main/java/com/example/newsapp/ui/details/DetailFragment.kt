@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide
 import com.example.newsapp.R
 import com.example.newsapp.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_detail.*
 
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
@@ -64,6 +65,7 @@ class DetailFragment : Fragment() {
 
             mBinding.iconFavorite.setOnClickListener {
                 viewModel.saveFavoriteArticle(article)
+                icon_favorite.setImageResource(R.drawable.baseline_favorite_click)
             }
         }
     }

@@ -5,9 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsapp.data.api.NewsRepository
+import com.example.newsapp.models.Article
 import com.example.newsapp.models.NewsResponse
 import com.example.newsapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -24,7 +26,7 @@ class MainViewModel @Inject constructor(private val repository: NewsRepository):
     private fun getNews(countryCode: String) =
         viewModelScope.launch {
             newsLiveData.postValue(Resource.Loading())
-            val response = repository.getNews(contryCode = countryCode, pageNumber = newsPage)
+            val response = repository.getNews(countryCode = countryCode, pageNumber = newsPage)
             if (response.isSuccessful){
                 response.body().let { res ->
                     newsLiveData.postValue(Resource.Succes(res))

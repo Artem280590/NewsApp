@@ -16,7 +16,9 @@ import com.example.newsapp.databinding.FragmentMainBinding
 import com.example.newsapp.ui.adapters.NewsAdapter
 import com.example.newsapp.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.item_article.view.*
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -59,7 +61,7 @@ class MainFragment : Fragment() {
                 is Resource.Error ->{
                     pag_progress_bar.visibility = View.INVISIBLE
                     response.data?.let {
-                        Log.e("checkData", "MainFragment: error: ${it}")
+                        Log.e("checkData", "MainFragment: error: $it")
                     }
                 }
                 is Resource.Loading ->{
@@ -67,7 +69,6 @@ class MainFragment : Fragment() {
                 }
             }
         }
-
     }
 
     private fun initAdapter(){

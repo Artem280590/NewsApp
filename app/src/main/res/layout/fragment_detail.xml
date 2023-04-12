@@ -22,34 +22,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <ImageView
-                android:id="@+id/icon_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="9dp"
-                android:layout_marginBottom="18dp"
-                android:src="@drawable/baseline_arrow"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <ImageView
                 android:id="@+id/icon_favorite"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/baseline_favorite"
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="17dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/icon_share"/>
+                app:layout_constraintEnd_toStartOf="@+id/icon_share"
+                app:tint="@color/teal"/>
             <ImageView
                 android:id="@+id/icon_share"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/baseline_share"
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/teal"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
